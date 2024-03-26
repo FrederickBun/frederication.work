@@ -1,5 +1,5 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { AtSign, DollarSign, Facebook, Github, Mail, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
@@ -7,21 +7,39 @@ import { Card } from "../components/card";
 const socials = [
 	{
 		icon: <Twitter size={20} />,
-		href: "https://twitter.com/chronark_",
+		href: "https://twitter.com/FrederickAsYou",
 		label: "Twitter",
-		handle: "@chronark_",
+		handle: "@FrederickAsYou",
 	},
 	{
-		icon: <Mail size={20} />,
-		href: "mailto:dev@chronark.com",
+		icon: <AtSign size={20} />,
+		href: "mailto:seventeen@ohdragonboi.cn",
 		label: "Email",
-		handle: "dev@chronark.com",
+		handle: "seventeen@ohdragonboi.cn",
 	},
 	{
 		icon: <Github size={20} />,
-		href: "https://github.com/chronark",
+		href: "https://github.com/FrederickAsYou",
 		label: "Github",
-		handle: "chronark",
+		handle: "/FrederickAsYou",
+	},
+	{
+		icon: <Facebook size={20} />,
+		href: "https://www.facebook.com/FrederickAsYou",
+		label: "Facebook",
+		handle: "FrederickAsYou",
+	},
+	{
+		icon: <Youtube size={20} />,
+		href: "https://www.youtube.com/@Fredgg0017",
+		label: "Youtube",
+		handle: "@Fredgg0017",
+	},
+	{
+		icon: <DollarSign size={20} />,
+		href: "https://polar.sh/FrederickAsYou",
+		label: "Donation",
+		handle: "polar@sh/FrederickAsYou",
 	},
 ];
 

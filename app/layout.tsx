@@ -6,19 +6,19 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "Frederick's Portfolio",
+    template: "%s | Frederick's Portfolio",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "I'm a front-end developer from China. And I also an OI player from High School Affiliated to Southwest University",
   openGraph: {
-    title: "chronark.com",
+    title: "Frederick's Portfolio",
     description:
       "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+    url: "https://frederication.work",
+    siteName: "Frederick's Portfolio",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://frederication.work/og.png",
         width: 1920,
         height: 1080,
       },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "Frederick Chen",
     card: "summary_large_image",
   },
   icons: {
