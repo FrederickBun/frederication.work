@@ -1,26 +1,24 @@
 import "../global.css";
-import { Inter } from "next/font/google";
-import LocalFont from "next/font/local";
+import { Inter } from "@next/font/google";
+import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
-import MouseCursor from "@/app/components/mouse-cursor";
-import { CursorProvider } from "@/app/components/cursor-context";
-import React from "react";
 
 export const metadata: Metadata = {
   title: {
-    default: "EvanNotFound's Portfolio",
-    template: "%s | EvanNotFound",
+    default: "Frederick's Portfolio",
+    template: "%s | Frederick's Portfolio",
   },
-  description: "A student and a Front-end developer in Montreal, Canada",
+  description: "I'm a front-end developer from China. And I also an OI player from High School Affiliated to Southwest University",
   openGraph: {
-    title: "EvanNotFound's Portfolio",
-    description: "A student and a Front-end developer in Montreal, Canada",
-    url: "https://evannotfound.com",
-    siteName: "EvanNotFound's Portfolio",
+    title: "Frederick's Portfolio",
+    description:
+      "Co-founder of unkey.dev and founder of planetfall.io",
+    url: "https://frederication.work",
+    siteName: "Frederick's Portfolio",
     images: [
       {
-        url: "https://evannotfound.com/og.png",
+        url: "https://frederication.work/og.png",
         width: 1920,
         height: 1080,
       },
@@ -40,8 +38,11 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "EvanNotFound",
+    title: "Frederick Chen",
     card: "summary_large_image",
+  },
+  icons: {
+    shortcut: "/favicon.png",
   },
 };
 const inter = Inter({
@@ -65,14 +66,10 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body
-        className={`bg-black no-scrollbar ${
-          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-        }`}
+        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+          }`}
       >
-        <CursorProvider>
-          <MouseCursor />
-          {children}
-        </CursorProvider>
+        {children}
       </body>
     </html>
   );

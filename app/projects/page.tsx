@@ -5,10 +5,7 @@ import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
 import { Redis } from "@upstash/redis";
-import { ArrowRight, Eye } from "lucide-react";
-import AnimatedTitleWord from "@/app/components/framer-animation/animated-title-word";
-import AnimatedDivider from "@/app/components/framer-animation/animated-divider";
-import AnimatedText from "@/app/components/framer-animation/animated-text";
+import { Eye } from "lucide-react";
 
 const redis = Redis.fromEnv();
 
@@ -18,21 +15,14 @@ export default async function ProjectsPage() {
     await redis.mget<number[]>(
       ...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
     )
-  ).reduce(
-    (acc, v, i) => {
-      acc[allProjects[i].slug] = v ?? 0;
-      return acc;
-    },
-    {} as Record<string, number>,
-  );
+  ).reduce((acc, v, i) => {
+    acc[allProjects[i].slug] = v ?? 0;
+    return acc;
+  }, {} as Record<string, number>);
 
-  const featured = allProjects.find((project) => project.slug === "blog")!;
-  const top2 = allProjects.find(
-    (project) => project.slug === "hexo-theme-redefine",
-  )!;
-  const top3 = allProjects.find(
-    (project) => project.slug === "typora-theme-redefine",
-  )!;
+  const featured = allProjects.find((project) => project.slug === "Code-Repo")!;
+  const top2 = allProjects.find((project) => project.slug === "planetfall")!;
+  const top3 = allProjects.find((project) => project.slug === "highstorm")!;
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(
@@ -50,18 +40,19 @@ export default async function ProjectsPage() {
   return (
     <div className="relative pb-16">
       <Navigation />
-      <div className="px-6 pt-24 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32 pb-16">
+      <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
         <div className="max-w-2xl mx-auto lg:mx-0">
-          <AnimatedTitleWord className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
             Projects
-          </AnimatedTitleWord>
-          <AnimatedText className="mt-4 text-zinc-400">
-            Projects I've worked on, some personal, some just for fun.
-          </AnimatedText>
+          </h2>
+          <p className="mt-4 text-zinc-400">
+            Some of the projects are from work and some are on my own time.
+          </p>
         </div>
-        <AnimatedDivider className={"h-px bg-zinc-800"} />
+        <div className="w-full h-px bg-zinc-800" />
+
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
-          <Card delay={0}>
+          <Card>
             <Link href={`/projects/${featured.slug}`}>
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
@@ -90,39 +81,34 @@ export default async function ProjectsPage() {
                 >
                   {featured.title}
                 </h2>
-                <p className="mt-4 leading-7 duration-150 text-zinc-400 group-hover:text-zinc-300">
+                <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
                   {featured.description}
                 </p>
                 <div className="absolute bottom-4 md:bottom-8">
-                  <div className="hidden text-zinc-200 hover:text-zinc-50 lg:flex flex-row items-center gap-[2px] justify-center">
-                    <p>Read more</p>
-                    <ArrowRight
-                      className={
-                        "w-[18px] h-[18px] group-hover:translate-x-1 transition-transform"
-                      }
-                    />
-                  </div>
+                  <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
+                    Read more <span aria-hidden="true">&rarr;</span>
+                  </p>
                 </div>
               </article>
             </Link>
           </Card>
 
           <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
-            {[top2, top3].map((project, index) => (
-              <Card key={project.slug} delay={index === 0 ? 0.2 : 0.35}>
+            {[top2, top3].map((project) => (
+              <Card key={project.slug}>
                 <Article project={project} views={views[project.slug] ?? 0} />
               </Card>
             ))}
           </div>
         </div>
-        <AnimatedDivider className="hidden w-full h-px md:block bg-zinc-800" />
+        <div className="hidden w-full h-px md:block bg-zinc-800" />
 
         <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
           <div className="grid grid-cols-1 gap-4">
             {sorted
               .filter((_, i) => i % 3 === 0)
-              .map((project, index) => (
-                <Card key={project.slug} delay={index * 0.1 + 0.1}>
+              .map((project) => (
+                <Card key={project.slug}>
                   <Article project={project} views={views[project.slug] ?? 0} />
                 </Card>
               ))}
@@ -130,8 +116,8 @@ export default async function ProjectsPage() {
           <div className="grid grid-cols-1 gap-4">
             {sorted
               .filter((_, i) => i % 3 === 1)
-              .map((project, index) => (
-                <Card key={project.slug} delay={index * 0.1 + 0.25}>
+              .map((project) => (
+                <Card key={project.slug}>
                   <Article project={project} views={views[project.slug] ?? 0} />
                 </Card>
               ))}
@@ -139,8 +125,8 @@ export default async function ProjectsPage() {
           <div className="grid grid-cols-1 gap-4">
             {sorted
               .filter((_, i) => i % 3 === 2)
-              .map((project, index) => (
-                <Card key={project.slug} delay={index * 0.1 + 0.5}>
+              .map((project) => (
+                <Card key={project.slug}>
                   <Article project={project} views={views[project.slug] ?? 0} />
                 </Card>
               ))}

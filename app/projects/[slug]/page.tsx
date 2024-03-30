@@ -5,8 +5,6 @@ import { Header } from "./header";
 import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
-import ArticleWrapper from "@/app/projects/[slug]/article-wrapper";
-import React from "react";
 
 export const revalidate = 60;
 
@@ -41,13 +39,10 @@ export default async function PostPage({ params }: Props) {
     <div className="bg-zinc-50 min-h-screen">
       <Header project={project} views={views} />
       <ReportView slug={project.slug} />
-      <div
-        className={"w-full flex justify-center items-center pb-24 bg-zinc-50"}
-      >
-        <ArticleWrapper className="px-8 pb-12 pt-4 max-w-full md:!max-w-4xl -translate-y-32 prose prose-zinc prose-quoteless bg-zinc-100/60 backdrop-blur-xl sm:rounded-3xl gh-border">
-          <Mdx code={project.body.code} />
-        </ArticleWrapper>
-      </div>
+
+      <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
+        <Mdx code={project.body.code} />
+      </article>
     </div>
   );
 }
