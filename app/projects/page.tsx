@@ -21,8 +21,8 @@ export default async function ProjectsPage() {
   }, {} as Record<string, number>);
 
   const featured = allProjects.find((project) => project.slug === "Code-Repo")!;
-  const top2 = allProjects.find((project) => project.slug === "planetfall")!;
-  const top3 = allProjects.find((project) => project.slug === "highstorm")!;
+  const top2 = allProjects.find((project) => project.slug === "Code-Repo-2")!;
+  const top3 = allProjects.find((project) => project.slug === "2222")!;
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(
@@ -46,7 +46,7 @@ export default async function ProjectsPage() {
             Projects
           </h2>
           <p className="mt-4 text-zinc-400">
-            Some of the projects are from work and some are on my own time.
+            Some of the projects are from work and some are on my spare time.
           </p>
         </div>
         <div className="w-full h-px bg-zinc-800" />

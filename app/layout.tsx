@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Frederick's Portfolio",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
+      "I'm a front-end developer from China. And I also an OI player from High School Affiliated to Southwest University",
     url: "https://frederication.work",
     siteName: "Frederick's Portfolio",
     images: [
