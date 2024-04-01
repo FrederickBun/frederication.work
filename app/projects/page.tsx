@@ -28,7 +28,7 @@ export default async function ProjectsPage() {
 
   const featured = allProjects.find((project) => project.slug === "Code-Repo")!;
   const top2 = allProjects.find(
-    (project) => project.slug === "hexo-theme-redefine",
+    (project) => project.slug === "blog",
   )!;
   const top3 = allProjects.find(
     (project) => project.slug === "typora-theme-redefine",
