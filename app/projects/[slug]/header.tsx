@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowLeft, Eye, Github, Instagram, ArrowRight, AtSign, X, ArrowUpRight, XSquare } from "lucide-react";
+import { ArrowLeft, Eye, Github, Instagram, ArrowRight, AtSign, X, ArrowUpRight, XSquare, Database } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -113,9 +113,9 @@ export const Header: React.FC<Props> = ({ project, views }) => {
             </span>
             <Link
               target="_blank"
-              href="mailto:seventeen@ohdragonboi.cn"
+              href="https://status.ohdragonboi.cn/"
             >
-              <AtSign
+              <Database
                 className={`w-6 h-6 duration-200 hover:font-medium ${
                   isIntersecting
                     ? " text-zinc-400 hover:text-zinc-100"
