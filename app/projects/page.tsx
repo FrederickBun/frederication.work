@@ -73,7 +73,7 @@ export default async function ProjectsPage() {
                         }).format(new Date(featured.date))}
                       </time>
                     ) : (
-                      <span>SOON</span>
+                      <span>Stay tuned!</span>
                     )}
                   </div>
                   <span className="flex items-center gap-1 text-xs text-zinc-500">
