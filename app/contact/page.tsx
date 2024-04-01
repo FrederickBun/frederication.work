@@ -1,5 +1,5 @@
 "use client";
-import { AtSign, Facebook, Github, Link2, LinkedinIcon, Mail, MailQuestion, Twitter, Youtube } from "lucide-react";
+import { AlignLeft, AtSign, Facebook, Github, Link2, LinkedinIcon, Mail, MailQuestion, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
@@ -43,10 +43,10 @@ const socials = [
     handle: "@Fredgg0017",
   },
   {
-    icon: <Link2 size={20} />,
-    href: "https://bento.me/frederickasyou",
-    label: "social page",
-    handle: "#frederickasyou",
+    icon: <AlignLeft size={20} />,
+    href: "https://blog.frederication.work",
+    label: "blog",
+    handle: "blog&frederick$css",
   },
 ];
 
