@@ -26,12 +26,12 @@ export default async function ProjectsPage() {
     {} as Record<string, number>,
   );
 
-  const featured = allProjects.find((project) => project.slug === "Code-Repo")!;
+  const featured = allProjects.find((project) => project.slug === "code-repo")!;
   const top2 = allProjects.find(
     (project) => project.slug === "blog",
   )!;
   const top3 = allProjects.find(
-    (project) => project.slug === "studev",
+    (project) => project.slug === "alignpixel",
   )!;
   const sorted = allProjects
     .filter((p) => p.published)
