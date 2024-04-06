@@ -26,7 +26,7 @@ export default async function ProjectsPage() {
     {} as Record<string, number>,
   );
 
-  const featured = allProjects.find((project) => project.slug === "code-repo")!;
+  const featured = allProjects.find((project) => project.slug === "alignpixel")!;
   const top2 = allProjects.find(
     (project) => project.slug === "blog",
   )!;
