@@ -31,7 +31,7 @@ export default async function ProjectsPage() {
     (project) => project.slug === "blog",
   )!;
   const top3 = allProjects.find(
-    (project) => project.slug === "alignpixel",
+    (project) => project.slug === "code-repo",
   )!;
   const sorted = allProjects
     .filter((p) => p.published)
