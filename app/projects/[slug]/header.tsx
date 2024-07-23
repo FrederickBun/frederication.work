@@ -113,7 +113,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
             </span>
             <Link
               target="_blank"
-              href="https://status.ohdragonboi.cn/"
+              href="https://status.setbun.com/"
             >
               <Database
                 className={`w-6 h-6 duration-200 hover:font-medium ${
