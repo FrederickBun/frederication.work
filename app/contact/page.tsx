@@ -14,9 +14,9 @@ const socials = [
   // },
   {
     icon: <Twitter size={20} />,
-    href: "https://twitter.com/FrederickAsYou",
+    href: "https://twitter.com/FrederickBun",
     label: "twitter",
-    handle: "@FrederickAsYou",
+    handle: "@FrederickBun",
   },
   {
     icon: <AtSign size={20} />,
@@ -44,9 +44,9 @@ const socials = [
   },
   {
     icon: <AlignLeft size={20} />,
-    href: "https://blog.frederication.work",
+    href: "https://setbun.com",
     label: "blog",
-    handle: "blog&frederick$css",
+    handle: "Buntalk",
   },
 ];
 
