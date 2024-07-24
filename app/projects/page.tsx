@@ -28,10 +28,10 @@ export default async function ProjectsPage() {
 
   const featured = allProjects.find((project) => project.slug === "blog")!;
   const top2 = allProjects.find(
-    (project) => project.slug === "code-repo",
+    (project) => project.slug === "coderepo",
   )!;
   const top3 = allProjects.find(
-    (project) => project.slug === "pixel-chat",
+    (project) => project.slug === "pixelchat",
   )!;
   const sorted = allProjects
     .filter((p) => p.published)
