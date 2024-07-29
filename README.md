@@ -1,2 +1,2 @@
-# Fred's Profile Version 3.0
-Frederick's Personal Site
+# BunDragon's Protfolio
+Defined by [@FrederickBun](https://github.com/FrederickBun)

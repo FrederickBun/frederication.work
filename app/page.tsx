@@ -5,8 +5,9 @@ import CursorLink from "@/app/components/cursor-link";
 
 const navigation = [
   { name: "Projects", href: "/projects" },
-  // { name: "Photography", href: "https://photography.ohevan.com" },
   { name: "Contact", href: "/contact" },
+  { name: "About", href: "/about" },
+  { name: "Blog", href: "https://www.setbun.com" },
 ];
 
 export default function Home() {
@@ -50,11 +51,11 @@ export default function Home() {
         className="block sm:hidden my-8 text-center animate-fade-in"
       >
         <h2 className="px-8 text-sm text-zinc-500 ">
-          Hi, my name is <span className={"font-bold"}>Evan Luo</span>. I'm a
-          frontend developer.
+          Hi, my name is <span className={"font-bold"}>Frederick Chen</span>. I'm a
+          frontend developer and also an OI player.
           <div className={"mt-2"}>
             I'm a student currently studying in{" "}
-            <span className={"underline underline-offset-1"}>Montreal</span>.
+            <span className={"underline underline-offset-1"}>Chongqing</span>, China.
           </div>
         </h2>
       </div>

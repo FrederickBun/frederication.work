@@ -6,12 +6,6 @@ import { Card } from "../components/card";
 import React from "react";
 
 const socials = [
-  // {
-  //   icon: <Instagram size={20} />,
-  //   href: "https://www.instagram.com/evannotfound/",
-  //   label: "Instagram",
-  //   handle: "@evannotfound",
-  // },
   {
     icon: <Twitter size={20} />,
     href: "https://twitter.com/FrederickBun",
