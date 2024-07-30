@@ -20,6 +20,19 @@ export default async function AboutPage() {
           </AnimatedText>
         </div>
         <AnimatedDivider className={"h-px bg-zinc-800"} />
+        <div className="max-w-2xl mx-auto lg:mx-0">
+          <AnimatedText className="text-zinc-400">
+            Hello there! I'm Frederick Chen, a student from Chongqing, China. I'm a OI player, and I'm currently a front-end developer. 
+          </AnimatedText>
+          <br></br>
+          <AnimatedText className="text-zinc-400">
+            In my spare time, I'll make some interesting projects. And I also develop with my friends, because I think it's fun.
+          </AnimatedText>
+          <br></br>
+          <AnimatedText className="text-zinc-400">
+            If you want to contact me, you can send me an e-mail to <a href="mailto:seventeen@ohdragonboi.cn" className={"underline underline-offset-1"}>seventeen@ohdragonboi.cn</a>.
+          </AnimatedText>
+        </div>
       </div>
     </div>
   );
