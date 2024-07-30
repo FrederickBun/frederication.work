@@ -38,7 +38,7 @@ export default async function AboutPage() {
           </AnimatedText>
           <br></br>
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-            <div className="flex flex-row sm:grid gap-y-6 gap-x-8 text-base font-semibold leading-7 sm:grid-cols-2 md:flex lg:gap-x-10">
+            <div className="flex flex-row sm:grid gap-y-6 gap-x-8 text-base text-zinc-400 font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
               
               <div
                 className={
@@ -50,7 +50,7 @@ export default async function AboutPage() {
                 </Link>
                 <ArrowUpRight
                   className={
-                    "w-5 h-5 group-hover:translate-x-1  transition-all"
+                    "w-5 h-5 transition-all"
                   }
                 />
               </div>
@@ -64,9 +64,48 @@ export default async function AboutPage() {
                 </Link>
                 <ArrowUpRight
                   className={
-                    "w-5 h-5 group-hover:translate-x-1  transition-all"
+                    "w-5 h-5 transition-all"
                   }
                 />
+              </div>
+              <div
+                className={
+                  "group flex flex-row items-center justify-center.5 cursor-pointer hover:text-zinc-300 transition-all"
+                }
+              >
+                <Link target="_blank" href="https://github.com/FrederickBun">
+                  <Github
+                    className={
+                      "w-5 h-5 transition-all"
+                    }
+                  />
+                </Link>
+              </div>
+              <div
+                className={
+                  "group flex flex-row items-center justify-center.5 cursor-pointer hover:text-zinc-300 transition-all"
+                }
+              >
+                <Link target="_blank" href="mailto:seventeen@ohdragonboi.cn">
+                  <Mail
+                    className={
+                      "w-5 h-5 transition-all"
+                    }
+                  />
+                </Link>
+              </div>
+              <div
+                className={
+                  "group flex flex-row items-center justify-center.5 cursor-pointer hover:text-zinc-300 transition-all"
+                }
+              >
+                <Link target="_blank" href="https://x.com/FrederickAsYou">
+                  <Twitter
+                    className={
+                      "w-5 h-5 transition-all"
+                    }
+                  />
+                </Link>
               </div>
             </div>
           </div>

@@ -177,7 +177,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
                   </Link>
                   <ArrowUpRight
                     className={
-                      "w-5 h-5 group-hover:translate-x-1  transition-all"
+                      "w-5 h-5 transition-all"
                     }
                   />
                 </div>
