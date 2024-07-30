@@ -37,14 +37,39 @@ export default async function AboutPage() {
             For more information about my projects, please visit my Github profile.
           </AnimatedText>
           <br></br>
-          <Link
-                href="/contact"
-                target="_blank"
-          >
-            <span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
-              Contact Page <ArrowUpRight />
-            </span>
-          </Link>
+          <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+            <div className="flex flex-row sm:grid gap-y-6 gap-x-8 text-base font-semibold leading-7 sm:grid-cols-2 md:flex lg:gap-x-10">
+              
+              <div
+                className={
+                  "group flex flex-row items-center justify-center.5 cursor-pointer hover:text-zinc-300 transition-all"
+                }
+              >
+                <Link target="_blank" href="/contact">
+                  Contact Page
+                </Link>
+                <ArrowUpRight
+                  className={
+                    "w-5 h-5 group-hover:translate-x-1  transition-all"
+                  }
+                />
+              </div>
+              <div
+                className={
+                  "group flex flex-row items-center justify-center.5 cursor-pointer hover:text-zinc-300 transition-all"
+                }
+              >
+                <Link target="_blank" href="https://setbun.com">
+                  Buntalk(Blog)
+                </Link>
+                <ArrowUpRight
+                  className={
+                    "w-5 h-5 group-hover:translate-x-1  transition-all"
+                  }
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
