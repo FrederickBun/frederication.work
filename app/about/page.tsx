@@ -42,9 +42,8 @@ export default async function AboutPage() {
                 target="_blank"
           >
             <span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
-              Contact Page
+              Contact Page <ArrowUpRight />
             </span>
-            <ArrowUpRight />
           </Link>
         </div>
       </div>
