@@ -6,7 +6,7 @@ import AnimatedDivider from "@/app/components/framer-animation/animated-divider"
 import AnimatedText from "@/app/components/framer-animation/animated-text";
 import React from "react";
 
-export default function Example() {
+export default async function AboutPage() {
   return (
     <div className="relative pb-16">
       <Navigation />
@@ -16,9 +16,10 @@ export default function Example() {
             About
           </AnimatedTitleWord>
           <AnimatedText className="mt-4 text-zinc-400">
-            The introduce of myself.
+            The introduction of my self.
           </AnimatedText>
         </div>
+        <AnimatedDivider className={"h-px bg-zinc-800"} />
       </div>
     </div>
   );
