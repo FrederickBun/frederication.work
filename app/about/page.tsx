@@ -1,9 +1,10 @@
 "use client";
-import { AlignLeft, AtSign, Facebook, Github, Link2, LinkedinIcon, Mail, MailQuestion, Twitter, Youtube } from "lucide-react";
+import { AlignLeft, AtSign, Facebook, Github, Link2, LinkedinIcon, Mail, MailQuestion, Twitter, Youtube, ArrowUpRight } from "lucide-react";
 import { Navigation } from "../components/nav";
 import AnimatedTitleWord from "@/app/components/framer-animation/animated-title-word";
 import AnimatedDivider from "@/app/components/framer-animation/animated-divider";
 import AnimatedText from "@/app/components/framer-animation/animated-text";
+import Link from "next/link";
 import React from "react";
 
 export default async function AboutPage() {
@@ -30,8 +31,21 @@ export default async function AboutPage() {
           </AnimatedText>
           <br></br>
           <AnimatedText className="text-zinc-400">
-            If you want to contact me, you can send me an e-mail to <a href="mailto:seventeen@ohdragonboi.cn" className={"underline underline-offset-1"}>seventeen@ohdragonboi.cn</a>.
+            If you want to contact me, you can visit the Contact Page.
           </AnimatedText>
+          <AnimatedText className="text-zinc-400">
+            For more information about my projects, please visit my Github profile.
+          </AnimatedText>
+          <br></br>
+          <Link
+                href="/contact"
+                target="_blank"
+          >
+            <span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
+              Contact Page
+            </span>
+            <ArrowUpRight />
+          </Link>
         </div>
       </div>
     </div>
