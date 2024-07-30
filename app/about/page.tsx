@@ -36,7 +36,6 @@ export default async function AboutPage() {
           <AnimatedText className="text-zinc-400">
             For more information about my projects, please visit my Github profile.
           </AnimatedText>
-          <br></br>
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
             <div className="flex flex-row sm:grid gap-y-6 gap-x-8 text-base text-zinc-400 font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
               
