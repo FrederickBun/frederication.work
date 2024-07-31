@@ -6,6 +6,7 @@ import CursorLink from "@/app/components/cursor-link";
 const navigation = [
   { name: "Projects", href: "/projects" },
   { name: "Contact", href: "/contact" },
+  { name: "Works", href: "/works" },
   { name: "About", href: "/about" },
   { name: "Blog", href: "https://www.setbun.com" },
 ];

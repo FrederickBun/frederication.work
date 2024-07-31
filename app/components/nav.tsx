@@ -92,6 +92,28 @@ export const Navigation: React.FC = () => {
               )}
             </div>
             <div className={"group"}>
+              {pathname === "/works" ? (
+                <>
+                  <Link
+                    href={"/works"}
+                    className="duration-200 text-zinc-400 group-hover:text-zinc-100"
+                    aria-label={"Works"}
+                  >
+                    Works
+                  </Link>
+                  <NavUnderline />
+                </>
+              ) : (
+                <CursorLink
+                  href={"/works"}
+                  className="duration-200 text-zinc-400 group-hover:text-zinc-100"
+                  aria-label={"Works"}
+                >
+                  Works
+                </CursorLink>
+              )}
+            </div>
+            <div className={"group"}>
               {pathname === "/about" ? (
                 <>
                   <Link
