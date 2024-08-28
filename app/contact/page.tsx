@@ -20,9 +20,9 @@ const socials = [
   },
   {
     icon: <Github size={20} />,
-    href: "https://github.com/FrederickAsYou",
+    href: "https://github.com/FrederickBun",
     label: "github",
-    handle: "/FrederickAsYou",
+    handle: "/FrederickBun",
   },
   {
     icon: <Facebook size={20} />,
